@@ -1,0 +1,74 @@
+<div class="row g-0 justify-content-center align-items-center content-login">
+    <div class="col-sm-11 col-md-8">
+        <div class="row background-color-main content-text-input justify-content-center pb-4">
+            <div class="col-12 text-center header font-color-white">
+                <p class="my-2 roboto-font-3">Requisitos para residencias profesionales</p>
+            </div>
+            <div class="col-12 mt-3 mb-2">
+                <div class="row g-0">
+                    <div class="col-10">
+                        <p class="my-1"><b>a) Tener acreditado el servicio social</b></p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn-verify roboto-font-4 cursor-pointer" (click)="goToVerifyServiceSocial()">
+                            Verificar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2">
+                <div class="row g-0">
+                    <div class="col-10">
+                        <p class="my-1"><b>b) Tener acreditado las actividades extraescolares</b></p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn-verify roboto-font-4 cursor-pointer" (click)="goToVerifyExtraSchool()">
+                            Verificar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2">
+                <div class="row g-0">
+                    <div class="col-10">
+                        <p class="my-1"><b>c) Tener aprobado al menos el 80% de creditos de su plan de estudio</b></p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn-verify roboto-font-4 cursor-pointer" (click)="goToAdvanceReticular()">
+                            Verificar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2">
+                <div class="row g-0">
+                    <div class="col-10">
+                        <p class="my-1"><b>d) No contar con asignaturas en "Curso Especial"</b></p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn-verify roboto-font-4 cursor-pointer" (click)="goToAdvanceReticular()">
+                            Verificar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Actions Buttons -->
+        <div class="row g-0 justify-content-between">
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToInicio()">
+                    <span class="roboto-font-4">Inicio</span>
+                </button>
+            </div>
+
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToBack()">
+                    <span class="roboto-font-4">Regresar</span>
+                </button>
+            </div>
+        </div>
+        <!-- END Actions Buttons -->
+    </div>
+</div>

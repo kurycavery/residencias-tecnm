@@ -1,0 +1,61 @@
+/* Toast traveling */
+@keyframes toast-traveling-in-keyframes {
+    0% {
+        right: -30rem;
+    }
+    100% {
+        right: 2rem;
+    }
+}
+.toast-traveling-in-animation {
+    animation-delay: 0.5s;
+    animation-name: toast-traveling-in-keyframes;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+@keyframes toast-traveling-out-keyframes {
+    0% {
+        right: 2rem;
+    }
+    100% {
+        right: -30rem;
+    }
+}
+.toast-traveling-out-animation {
+    animation-name: toast-traveling-out-keyframes;
+    animation-duration: 0.25s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+/* END Toast traveling */
+
+
+/* Button styles */
+.toast {
+    z-index: 5;
+}
+
+.toast-btn {
+    height: calc(100% + 2.5px);
+    border: none;
+    border-radius: 0 12px 12px 0;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+    margin-right: 0;
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.toast:hover > .toast-btn {
+    width: fit-content;
+    padding: 0.75rem;
+    opacity: 1;
+}
+/* Button styles */

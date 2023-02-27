@@ -1,0 +1,44 @@
+<div class="row g-0 justify-content-center align-items-center content-login">
+    <div class="col-sm-11 col-md-8">
+        <div class="row background-color-main content-text-input justify-content-center pb-4">
+            <div class="col-12 text-center header font-color-white">
+                <p class="my-2 roboto-font-3">Avance Reticular</p>
+            </div>
+            
+            <div class="container-reticular">
+                <div class="semestre" *ngFor="let semestre of avanceReticular">
+                    <p class="text-center mt-4 mb-2"><b>{{semestre.nombre}}</b></p>
+                    <div class="card-reticula" 
+                        [ngClass]="{
+                            'background-color-main-soft': materia.color === 'uno',
+                            'background-color-warning': materia.color === 'dos'
+                        }"
+                        *ngFor="let materia of semestre.materias">
+                        <div class="center">
+                            <p class="text-center my-1">{{materia.nombre}}</p>
+                            <p class="text-center my-1">Creditos: {{materia.creditos}}</p>
+                            <p class="text-center my-1">{{materia.status?'Aprobada': 'N/A'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Actions Buttons -->
+        <div class="row g-0 justify-content-between">
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToInicio()">
+                    <span class="roboto-font-4">Inicio</span>
+                </button>
+            </div>
+
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToBack()">
+                    <span class="roboto-font-4">Regresar</span>
+                </button>
+            </div>
+        </div>
+        <!-- END Actions Buttons -->
+    </div>
+</div>

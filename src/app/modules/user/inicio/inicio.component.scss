@@ -1,0 +1,32 @@
+.content-inicio {
+    height: 100%;
+    padding-bottom: 2.8rem;
+}
+.badge-welcome {
+    background-color: var(--color-main2);
+    border-radius: 15px;
+}
+
+.icon-hand {
+    color: var(--color-warning1);
+    font-size: 18px;
+}
+.name-user-text {
+    font-size: 3rem;
+    color: var(--color-main1);
+    font-weight: 900;
+}
+
+.btn-action-start {
+    background-color: var(--color-main1);
+    border: 0;
+    color: white;
+    font-size: 1.8rem;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 0;
+}
+
+.btn-action-start:hover {
+    background-color: var(--color-main3);
+}

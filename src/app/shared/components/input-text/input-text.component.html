@@ -1,0 +1,50 @@
+<!-- Label -->
+<div class="label-input-container pb-1">
+       <label class="label-input">
+              {{label}}
+              <span *ngIf="required">*</span>
+       </label>
+</div>
+
+<!-- Input -->
+<input type="text"
+       [id]="idInput"
+       placeholder={{placeholder}}
+       [formControl]="control"
+       [readonly] = "readOnly"
+       (input)="valueChange.emit(true)"
+       (change)="changeText()"
+       [minlength]="minlength"
+       [maxlength]="maxlength"
+       onkeypress="return (
+              (event.charCode >= 65 && event.charCode <= 90) || 
+              (event.charCode >= 97 && event.charCode <= 122) ||
+              (event.charCode >= 48 && event.charCode <= 57) ||
+              (event.charCode == 225) ||
+              (event.charCode == 233) ||
+              (event.charCode == 237) ||
+              (event.charCode == 243) ||
+              (event.charCode == 250) ||
+              (event.charCode == 193) ||
+              (event.charCode == 201) ||
+              (event.charCode == 205) ||
+              (event.charCode == 211) ||
+              (event.charCode == 218) ||
+              (event.charCode == 164) ||
+              (event.charCode == 165) ||
+              (event.charCode == 209) ||
+              (event.charCode == 241) ||
+              (event.charCode == 46) ||
+              (event.charCode == 32) ||
+              (event.charCode == 44)||
+              (event.charCode == 46)
+              )"
+       
+       [ngClass]="{
+              'input-alert-border': (!control.valid && submit),
+              'disabled-input': readOnly
+       }">
+<br>
+
+<!-- Alert -->
+<span [id]="idInput+'input-alert'" class="input-alert-text" *ngIf="!control.valid && submit">{{inputsService.getErrorString(control, customErrorMessages)}}</span>

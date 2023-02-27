@@ -1,0 +1,31 @@
+.mat-calendar-body-cell-content {
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+.mat-icon-button2 .mat-button-wrapper {
+    display: flex !important;
+    position:  relative !important;
+    align-self: center !important;
+    margin: auto !important;
+    justify-self: center !important;
+    height: 30px !important;
+    padding: 0 !important;
+    z-index: 99 !important;
+}
+
+.mat-icon-button2 {
+    display: flex !important;
+    align-self: center !important;
+    justify-self: center !important;
+    position: absolute !important;
+    right: 0;
+    height: 100% !important;
+    top: 0 !important;
+    border-radius: 0px !important;
+}
+.mat-icon-button2:focus{
+    outline: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}

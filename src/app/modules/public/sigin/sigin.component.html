@@ -1,0 +1,26 @@
+<div class="row g-0 justify-content-center align-items-center content-login">
+    <div class="col-sm-11 col-md-5">
+        <div class="row background-color-main content-text-input justify-content-center">
+            <div class="col-12 text-center header font-color-white">
+                <p class="my-2 roboto-font-3">Inicia sesión</p>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <app-input-email [control]="loginEmailControl"
+                                 [label]="'Correo Electronico'"
+                                 [submit]="submit">
+                </app-input-email>
+            </div>
+            <div class="col-12">
+                <app-input-password [control]="loginPasswordControl"
+                                    [label]="'Contraseña'"
+                                    [submit]="submit">
+                </app-input-password>
+            </div>
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="sendValidate()">
+                    <span class="roboto-font-4">Entrar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

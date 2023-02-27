@@ -1,0 +1,192 @@
+/* Modals general style */
+.swal-popup-general {
+    padding-top: 15px !important;
+    box-shadow: 7px 7px 5px #000000BF;
+    border: 0.25px solid #FFFFFF;
+    border-radius: 54px !important;
+    background-color: #F4F4F4 !important;
+    min-width: 35rem !important;
+    min-height: 400px !important;
+}
+
+.swal2-popup {
+    border-radius: 20px 20px 20px 20px !important;
+    padding-top: 15px !important;
+    max-width: 400px !important;
+}
+
+.popup-class {
+    border-top: 15px solid var(--color-info2) !important;
+}
+
+.swal2-close:focus {
+    box-shadow: none !important;
+}
+
+.swal2-close:hover {
+    color: var(--color-main3) !important;
+}
+
+.swal-popup-weather {
+    border-radius: 20px 20px 20px 20px !important;
+    padding-top: 15px !important;
+    min-width: 600px !important
+}
+.popup-class {
+    border-radius: 20px 20px 20px 20px !important;
+    padding-top: 15px !important;
+    border-top: 15px solid var(--color-info2) !important;
+}
+
+.popup-input {
+    border-radius: 54px !important;
+    min-width: 30rem !important;
+    background-color: #F4F4F4 !important;
+    box-shadow: 7px 7px 5px #000000BF;
+    border: 0.25px solid #FFFFFF;
+}
+
+.btn-input {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    border-radius: 27px !important;
+    box-shadow: 3px 2px 1px #0000005E !important;
+    background-color: var(--color-success2) !important;
+    bottom: 0px !important;
+}
+
+.btn-acep {
+    background-color: var(--color-info2) !important;
+    color: var(--color-white) !important;
+    font-weight: bold !important;
+    border: var(--constrast-background-color) solid 0.15rem !important; 
+    transition: all .35s !important;
+}
+
+.btn-cancel {
+    background-color: var(--background-color) !important;
+    color: var(--color-main4) !important;
+    font-weight: bold !important;
+    border: var(--constrast-background-color) solid 0.15rem !important; 
+    transition: all .35s !important;
+}
+
+.btn-widht {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    border-radius: 27px !important;
+    box-shadow: 3px 2px 1px #0000005E !important;
+    bottom: 0px !important;
+    margin: 0px 5% !important;
+}
+
+.close-button {
+    border: solid 0px !important;
+    margin-top: 14px !important;
+    margin-right: 5px !important;
+}
+
+.swal2-inputerror {
+    border: 2px solid var(--color-danger2) !important;
+}
+
+.action-size {
+    height: fit-content !important;
+    bottom: 0px !important;
+    margin: 1rem auto 0 auto !important;
+    justify-content: center !important;
+    align-self: center !important;
+    width: 100% !important;
+}
+
+.title {
+    height: fit-content !important;
+    color: var(--color-success2) !important;
+    font-weight: bold !important;
+}
+.validation-msg {
+    background-color: var(--color-main6) !important;
+}
+
+.container-calendar-start-crop {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 21.5rem !important;
+}
+
+.container-calendar-nutrition {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 33rem !important;
+}
+
+.container-calendar-pest {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 39rem !important;
+}
+
+.container-calendar-irrigation {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 27.5rem !important;
+}
+
+.container-calendar-expense {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 28rem !important;
+}
+
+.container-calendar-sales  {
+    border-radius: 20px 20px 20px 20px !important;
+    min-height: 30rem !important;
+}
+/* END Modals genearl style */
+
+.navbarHideWithModalWeather {
+    z-index: 0 !important;
+}
+
+@media screen and (max-width: 576px) {
+    .swal2-popup {
+       min-width: 90% !important;
+       max-width: 90% !important;
+    }
+
+    .swal-popup-general {
+        min-width: 90% !important;
+        max-width: 90% !important;
+    }
+
+    #icon-modal-load {
+        font-size: 3rem !important;
+    }
+    #header-loanding {
+        padding-bottom: .5rem !important;
+    }
+
+    #body-loanding {
+        margin-top: .3rem !important;
+    }
+
+    #separator-loading {
+        margin-top: 8rem !important;
+    }
+
+    #icon-modal {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    #separator-modals {
+        margin-top: 10rem;
+    }
+
+    #title-modal {
+        font-size: 1.3rem !important;
+    }
+
+    #text-modal {
+        font-size: 1.1rem !important;
+    }
+}

@@ -1,0 +1,22 @@
+<!-- Label -->
+<div class="label-input-container pb-1">
+    <label class="label-input">
+        {{label}}
+        <span *ngIf="required">*</span>
+    </label>
+</div>
+
+<!-- Input -->
+<input type="email"
+    [id]="idInput"
+    placeholder={{placeholder}}
+    [formControl]="control"
+    [readonly] = "readOnly"
+    [maxlength]="maxlength"
+    [minlength]="minlength"
+    (input)="this.changueLowerCase()"
+    [ngClass]="{'input-alert-border': (!control.valid && submit)}">
+<br>
+
+<!-- Alert -->
+<span [id]="idInput+'input-alert'" class="input-alert-text" *ngIf="!control.valid && submit">{{inputsService.getErrorString(control, customErrorMessages)}}</span>

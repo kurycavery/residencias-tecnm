@@ -1,0 +1,29 @@
+.content-login {
+    height: 100%;
+    overflow: scroll;
+}
+.header {
+    background-color: var(--color-main1);
+    border-radius: 15px;
+}
+
+.content-text-input {
+    border-radius: 15px;
+}
+
+.btn-verify {
+    border: 0;
+    background-color: var(--color-main1);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 14px;
+}
+
+.btn-verify:hover {
+    background-color: var(--color-main3);
+}
+
+.subtitle-bar {
+    background-color: var(--color-main1);
+    color: white;
+}

@@ -1,0 +1,25 @@
+@mixin alert-mixin {
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+.success-alert {
+    background-color: var(--color-success3);
+    border: 2px solid var(--color-success1);
+    @include alert-mixin();
+}
+.warning-alert {
+    background-color: var(--color-warning2);
+    border: 2px solid var(--color-warning1);
+    @include alert-mixin();
+}
+.danger-alert {
+    background-color: var(--color-danger3);
+    border: 2px solid var(--color-danger1);
+    @include alert-mixin();
+}
+.info-alert {
+    background-color: var(--color-info3);
+    border: 2px solid var(--color-info1);
+    @include alert-mixin();
+}

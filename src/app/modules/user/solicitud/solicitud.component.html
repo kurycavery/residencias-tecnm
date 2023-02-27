@@ -1,0 +1,318 @@
+<div class="row g-0 justify-content-center align-items-center content-login pb-5">
+    <div class="col-sm-11 col-md-8">
+        <div class="row background-color-main content-text-input justify-content-center pb-4">
+            <div class="col-12 text-center header font-color-white">
+                <p class="my-2 roboto-font-3">{{title}}</p>
+            </div>
+            
+            <div class="col-10">
+                <p class="roboto-font-3 text-center">{{description}}</p>
+            </div>
+
+            <div class="row g-0 p-4 justify-content-center" *ngIf="showFirst">
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="noControlControl"
+                                        [label]="'Nº de control'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="nameStudentControl"
+                                        [label]="'Nombre'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="phoneStudentControl"
+                                        [label]="'Telefono'"
+                                        [placeholder]="'3211232344'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="socialSecurityControl"
+                                        [label]="'Seguro Social'"
+                                        [placeholder]="'IMMS, ISSTE, OTRO'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-email [control]="emailControl"
+                                        [label]="'Correo electronico'"
+                                        [placeholder]="'email@gmail.com'"
+                                        [submit]="submit1">
+                        </app-input-email>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="carreraControl"
+                                        [label]="'Carrera'"
+                                        [placeholder]="'ING. Sistemas computacionales'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="domicilioControl"
+                                        [label]="'Domicilio'"
+                                        [placeholder]="'Lopez mateos #53, col. Hidalgo, Michoacan'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="numerodeSeguroControl"
+                                        [label]="'Numero de seguro'"
+                                        [placeholder]="'1234567777'"
+                                        [submit]="submit1">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-3 mt-4">
+                    <button class="btn-main-strong" (click)="nextForm(actualForm)">
+                        <b class="roboto-font-3">Siguiente ></b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-0 p-4 justify-content-center" *ngIf="showSecond">
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="periodoProyevtdoControl"
+                                        [placeholder]="'Enero-Junio 2023'"
+                                        [label]="'Perido proyectado'"
+                                        [submit]="submit2">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="nameProyectotdoControl"
+                                        [label]="'Nombre del proyecto'"
+                                        [submit]="submit2">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="optionControl"
+                                        [label]="'Opci.on Elegida'"
+                                        [placeholder]="'Integral, x, y'"
+                                        [submit]="submit2">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="numberResidentesControl"
+                                        [label]="'Numero de residentes'"
+                                        [placeholder]="'hasta 4'"
+                                        [minlength]="1"
+                                        [withNumbers]="true"
+                                        [submit]="submit2">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-3 mt-4">
+                    <button class="btn-main-strong" (click)="nextForm(actualForm)">
+                        <b class="roboto-font-3">Siguiente ></b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-0 p-4 justify-content-center" *ngIf="showThird">
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="nombreEmpresaControl"
+                                        [label]="'Nombre de la empresa'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="RFCControl"
+                                        (valueChange)="rfcChange()"
+                                        [label]="'RFC'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="giroControl"
+                                        [label]="'Giro, ramo, sector'"
+                                        [placeholder]="'privado, publico....'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="calleNumberControl"
+                                        [label]="'Calle y Numero'"
+                                        [placeholder]="'Agustin Melgar #12'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="nombretitularControl"
+                                        [label]="'Nombre completo del titular'"
+                                        [placeholder]="'Antonio Nose Nose'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="puestoTitularControl"
+                                        [label]="'Puesto del Titular'"
+                                        [placeholder]="'Director General'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="asesorExternoControl"
+                                        [label]="'Nombre de asesor externo'"
+                                        [placeholder]="'Adrian Vega Vega'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="puestoAsesorControl"
+                                        [label]="'Puesto asesor externo'"
+                                        [placeholder]="'Director de desarrollo'"
+                                        [submit]="submit3">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-3 mt-4">
+                    <button class="btn-main-strong" (click)="nextForm(actualForm)">
+                        <b class="roboto-font-3">Siguiente ></b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-0 p-4 justify-content-center" *ngIf="showFour">
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="coloniaControl"
+                                        [label]="'Colonia'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="cpControl"
+                                        [label]="'Codigo postal'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="ciudadEstadoControl"
+                                        [label]="'Ciudad y Estado'"
+                                        [placeholder]="'Morelia, Michoacan'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="telefonoEmpresaControl"
+                                        [label]="'Telefono'"
+                                        [placeholder]="'4566544567'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                </div>
+
+                <div class="col-6 px-3">
+
+                    <div class="my-2">
+                        <app-input-text [control]="nombreTitularControl"
+                                        [label]="'Nombre completo del intermediario'"
+                                        [placeholder]="'Antonio Nose Nose'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="puestoIntermediarioControl"
+                                        [label]="'Puesto del intermediario'"
+                                        [placeholder]="'Director General'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+                    <div class="my-2">
+                        <app-input-text [control]="misionControl"
+                                        [label]="'Mision de la empresa'"
+                                        [placeholder]="'.......'"
+                                        [submit]="submit4">
+                        </app-input-text>
+                    </div>
+
+
+                </div>
+
+                <div class="col-3 mt-4">
+                    <button class="btn-main-strong" (click)="nextForm(actualForm)">
+                        <b class="roboto-font-3">Finalizar</b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-0 p-4 justify-content-around" *ngIf="showEnd">
+                <div class="col-3">
+                    <button class="btn-main-strong" (click)="printPDF()">Imprimir Solicitud</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn-main-strong" (click)="modifyAgain()">
+                        Modificar
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Actions Buttons -->
+        <div class="row g-0 justify-content-between">
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToInicio()">
+                    <span class="roboto-font-4">Inicio</span>
+                </button>
+            </div>
+
+            <div class="col-4 my-4">
+                <button class="btn-main-strong" (click)="goToBack()">
+                    <span class="roboto-font-4">Regresar</span>
+                </button>
+            </div>
+        </div>
+        <!-- END Actions Buttons -->
+    </div>
+</div>
