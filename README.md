@@ -1,6 +1,29 @@
 # ResidenciasTecnm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+Este proyecto es generado con angular
+
+## Pasos y requerimientos para correr el sito web
+
+1. para poder correr este proyecto es necesario tener instalado node para instalarlo puede visitar la pagina oficial: https://nodejs.org/en/
+en dado caso de teenr dudas sobre la instalacion favor de checar un video de youtube.
+
+2. despues de tener node instalado es necesario instalar el CLI de angular (COMAND LINE INTERFACE) para instalar este CLI basta con ejecutar el 
+comando siguiente en la terminal de preferencia: npm install -g @angular/cli, en este sitio web obtendra mas informacion sobre esta cli: https://angular.io/cli si se tienen dudas favor de revisar un video de youtube
+
+3. una vez instalado el node y el cli descargar el presente repositorio y en la carpeta raiz ejecutar npm i
+
+4. si al ejecutar npm i sale un error ejecutar npm install --force, en su lugar
+
+5. Este comando lo que ara es instalar las dependencias node necesarias para el proyecto
+
+6. una vez instalados los node_modules para correr en local el proyecto:
+basta con abrir una terminal en la carpeta raiz del proyecto y ejecutar el comando ng serve -o
+
+7.- este comando correra el sitio web y lo abrira en un navegador predeteminado que tenga
+
+8.- si se tienen dudas favor de ver un video en youtube de como correr un proyecto angular
+
+
 
 ## Development server
 
