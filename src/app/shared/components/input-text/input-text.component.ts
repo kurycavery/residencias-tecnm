@@ -24,7 +24,7 @@ export class InputTextComponent implements OnInit {
   @Input() submit!: boolean;
   @Input() readOnly = false;
   @Input() withNumbers = false;
-  @Input() maxlength = 18;
+  @Input() maxlength = 2000;
   @Input() minlength = 4 ;
   @Input() maskRule = '';
   @Input() customErrorMessages: InputErrorCatalogInterface = {};
