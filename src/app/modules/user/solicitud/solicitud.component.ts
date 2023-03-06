@@ -306,7 +306,9 @@ export class SolicitudComponent {
         misionEmpresa: this.misionControl.value
     }
 
-      this.pdfService.downLoadPdf( bodyToPDF );
+    localStorage.setItem('data', JSON.stringify(bodyToPDF));
+    this.router.navigateByUrl('/user/solicitud-print');
+      // this.pdfService.downLoadPdf( bodyToPDF );
     }
   }
 
