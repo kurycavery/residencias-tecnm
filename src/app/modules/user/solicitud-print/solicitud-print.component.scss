@@ -1,0 +1,87 @@
+.tabla-header {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.border-celda {
+    border: 2px solid black;
+}
+
+.table-data-header {
+    width: 350px;
+}
+
+.border-data-header {
+    border: 2px solid black !important;
+    border-collapse: collapse;
+}
+
+.logotec {
+    width: 130px;
+}
+
+.text-outline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.gray-row {
+    background-color: var(--color-gray4);
+    padding: 8px 15px 8px 2px;
+    border: 1px solid black;
+}
+
+.border-row {
+    padding: 8px 15px 8px 2px;
+    border: 1px solid black;
+}
+
+.alto {
+    padding: 8px 15px 8px 2px;
+    height: 100%;
+}
+
+.alto2 {
+    position: relative;
+    height: 100% !important;
+}
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute;
+    width: 100%;
+}
+
+.alto3 {
+    position: relative;
+    height: 50% !important;
+}
+
+.container-scroll {
+    padding-bottom: 70px;
+    overflow-y: scroll;
+}
+
+.btn-imp {
+    border: 0;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 9px;
+    background-color: var(--color-main1);
+    cursor: pointer;
+}
+
+.pequediv {
+    position: relative;
+    overflow-x: scroll;
+    width: 1200px;
+    margin: 10px 30px;
+    z-index: 0 !important;
+}
+.container-inter {
+    position: relative;
+    width: 1500px !important;
+}

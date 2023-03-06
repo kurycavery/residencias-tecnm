@@ -1,0 +1,595 @@
+<div class="row g-0 justify-content-center container-scroll">
+
+    <!-- Button -->
+    <div class="col-10 text-center py-4">
+        <button class="btn-imp" (click)="downloadPDF()">{{!cargando?'Imprimir solicitud':'Cargando...'}}</button>
+    </div>
+    <!-- END Button -->
+
+
+    <div class="col-12">
+        <!-- Header -->
+        <div class="pequediv">
+            <div class="conatiner-inter" id="htmlData">
+                <table class="tabla-header roboto-font-3">
+                    <tr>
+            
+                        <!-- Image header -->
+                        <td class="border-celda text-center">
+                            <img class="logotec" src="../../../../assets/img/certified/teclogo.jpeg">
+                        </td>
+                        <!-- END Image header -->
+            
+            
+                        <!-- TITLE -->
+                        <td class="border-celda">
+                            <p class="text-center mb-1 bold">Sistema de Gestión Integral</p>
+                            <p class="text-center my-1 bold">Formato para Solicitud de Residencias</p>
+                            <p class="text-center mt-0">Profesionales por competencias</p>
+                        </td>
+                        <!-- END TITLE -->
+            
+            
+                        <!-- Data -->
+                        <td class="table-data-header">
+                            <table class="w-100">
+            
+                                <tr>
+                                    <p class="my-1">Código: ITSP-AC-PO-004-01</p>
+                                </tr>
+            
+                                <tr>
+                                    <p class="my-1">Revisión: 1</p>
+                                </tr>
+            
+                                <tr>
+                                    <p class="my-1">Página: 1 de 3</p>
+                                </tr>
+            
+                            </table>
+                        </td>
+                        <!-- End Data -->
+            
+            
+                    </tr>
+                </table>
+                <div class="row g-0 justify-content-center">
+                    <!-- Header -->
+                    <div class="col-12 mt-2">
+                        <p class="text-center roboto-font-3 bold my-1">INSTITUTO TECNOLÓGICO</p>
+                        <p class="text-center roboto-font-3 bold my-1">DIVISIÓN DE ESTUDIOS PROFESIONALES</p>
+                        <p class="text-center roboto-font-3 bold my-1">RESIDENCIAS PROFESIONALES</p>
+                        <p class="text-center roboto-font-3 bold my-1">SOLICITUD DE RESIDENCIAS PROFESIONALES</p>
+                    </div>
+                    <!-- END Header -->
+            
+                    <!-- Lugar y fecha -->
+                    <div class="col-12 mt-3 roboto-font-3">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <b>Lugar:</b>
+                                    </div>
+                                    <div class="col">
+                                        <b class="ms-1 text-outline">{{data.ciudadEstado}}</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <b>Fecha:</b>
+                                    </div>
+                                    <div class="col">
+                                        <b class="ms-1 text-outline">{{'22/02/2024'}}</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Lugar y fecha -->
+            
+                    <!-- Att y c -->
+                    <div class="col-12 roboto-font-3">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <p class="mb-1">C.</p>
+                                <p class="my-1">Jefe (a) de la DIv. de Estudios Profesionales</p>
+                            </div>
+                            <div class="col-6">
+                                <p  class="mb-1">AT´N: C.</p>
+                                <p class="my-1">Coor. de la carrera</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- ENd Att y c -->
+            
+            
+                    <!-- NAme pryecto -->
+                    <div class="col-12 my-2 roboto-font-3">
+                        <div class="row g-0">
+                            <div class="col-auto gray-row">
+                                <b>NOMBRE DEL PROYECTO:</b>
+                            </div>
+                            <div class="col ms-2 border-row">
+                                {{data.nombreProyecto}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END NAme pryecto -->
+            
+                    <!-- Opcion elegida  -->
+                    <div class="col-12 my-2 roboto-font-3">
+                        <div class="row g-0">
+                            <div class="col-auto gray-row">
+                                <b>OPCIÓN ELEGIDA:</b>
+                            </div>
+                            <div class="col ms-2">
+                                <div class="row g-0">
+                                    <div class="col mx-2">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                <b>Banco de Proyectos</b>
+                                            </div>
+                                            <div class="col-1 border-row">
+                                                {{data.opcionelEgida==='Banco de Proyectos'?'X':''}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mx-2">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                <b>Propuesta propia</b>
+                                            </div>
+                                            <div class="col-1 border-row">
+                                                {{data.opcionelEgida==='Propuesta propia'?'X':''}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col ms-2">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                <b>Trabajador</b>
+                                            </div>
+                                            <div class="col-1 border-row">
+                                                {{data.opcionelEgida==='Trabajador'?'X':''}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END opcion elegida -->
+            
+                    <!-- Periodo proyectado-->
+                    <div class="col-12 my-2 roboto-font-3">
+                        <div class="row g-0">
+                            <div class="col-auto gray-row">
+                                <b>PERIODO PROYECTADO:</b>
+                            </div>
+                            <div class="col ms-2">
+                                <div class="row g-0">
+                                    <div class="col mx-2 border-row">
+                                        {{data.periodoProyect}}
+                                    </div>
+                                    <div class="col-2 mx-2 border-row">
+                                        <b>Número de residentes</b>
+                                    </div>
+            
+                                    <div class="col-1 ms-2 border-row">
+                                        {{data.noResidentes}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Periodo proyectado-->
+            
+            
+                    <!-- Datos de la empresa -->
+                    <div class="col-12 roboto-font-3">
+                        <p class="mb-1">Datos de la empresa:</p>
+                        <div class="row g-0">
+            
+            
+                            <!-- Nombre empresa -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Nombre:</b>
+                                    </div>
+                                    <div class="col border-row">
+                                        {{data.nameEmpresa}}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Nombre empresa -->
+            
+            
+                            <!-- Giro y RFC -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Giro, Ramo, Sector:</b>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                {{data.giro}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-1 border-row">
+                                                <b>R.F.C</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-3 border-row">
+                                                <b>{{data.rfc}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Giro y RFC -->
+            
+            
+                            <!-- Nombre empresa -->
+                            <div class="col-12">
+                                <div class="row g-0 relative">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Domicilio:</b>
+                                    </div>
+                                    <div class="col border-row">
+                                        {{data.domicilio}}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Nombre empresa -->
+            
+            
+                            <!-- Colonia y CP -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Colonia:</b>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                {{data.colonia}}
+                                            </div>
+            
+                                            <!-- CP -->
+                                            <div class="col-1 border-row text-center">
+                                                <b>C.P</b>
+                                            </div>
+                                            <!-- END CP -->
+            
+                                            <!-- CP -->
+                                            <div class="col-1 border-row">
+                                                <b>{{data.cp}}</b>
+                                            </div>
+                                            <!-- END CP -->
+            
+                                            <!-- FAX -->
+                                            <div class="col-1 border-row text-center">
+                                                <b>Fax</b>
+                                            </div>
+                                            <!-- END FAX -->
+            
+                                            <!-- FAX -->
+                                            <div class="col-2 border-row">
+                                                <b>{{data.telefono}}</b>
+                                            </div>
+                                            <!-- END FAX -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Colonia y Cp -->
+            
+            
+                            <!-- City y RFC -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Ciudad:</b>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                {{data.ciudadEstado}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>Teléfono:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>{{data.telefonoEmpresa}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END City y RFC -->
+            
+            
+                            <!-- Mision empresa -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Misión de la emprea:</b>
+                                    </div>
+                                    <div class="col border-row">
+                                        {{data.misionEmpresa}}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Mision empresa -->
+            
+            
+                            <!-- Titular -->
+                            <div class="col-12 relative">
+                                <div class="row g-0 relative">
+                                    <div class="col-2 border-row ps-1">
+                                        <b>Nombre del titular de la empresa:</b>
+                                    </div>
+                                    <div class="col relative">
+                                        <div class="row g-0 alto2 absolute">
+                                            <div class="col border-row">
+                                                {{data.titularName}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-1 border-row">
+                                                <b>Puesto:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-3 border-row">
+                                                <b>{{data.puestotitular}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Titular -->
+            
+            
+                            <!-- Asesor Ext -->
+                            <div class="col-12 relative">
+                                <div class="row g-0 relative">
+                                    <div class="col-2 border-row ps-1">
+                                        <b>Nombre del (la) Asesor (a) externo (a):</b>
+                                    </div>
+                                    <div class="col relative">
+                                        <div class="row g-0 alto2 absolute">
+                                            <div class="col border-row">
+                                                {{data.asesorExt}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-1 border-row">
+                                                <b>Puesto:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-3 border-row">
+                                                <b>{{data.puestoAseExt}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Asesor Ext -->
+            
+            
+                            <!-- persona firmar -->
+                            <div class="col-12 relative">
+                                <div class="row g-0 relative">
+                                    <div class="col-2 border-row ps-1">
+                                        <b>Nombre de la persona que firmará el acuerdo de trabajo. estudiante-escuel-empresa:</b>
+                                    </div>
+                                    <div class="col relative">
+                                        <div class="row g-0 alto2 absolute">
+                                            <div class="col border-row">
+                                                {{data.intermediarioName}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-1 border-row">
+                                                <b>Puesto:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-3 border-row">
+                                                <b>{{data.puestoIntermediario}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Asesor Ext -->
+            
+            
+                        </div>
+                    </div>
+                    <!-- END Datos de la empresa -->
+            
+            
+                    <!-- Datos del alumno -->
+                    <div class="col-12 roboto-font-3">
+                        <p class="mb-1">Datos del Residente:</p>
+                        <div class="row g-0">
+            
+            
+                            <!-- Nombre Residente -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Nombre:</b>
+                                    </div>
+                                    <div class="col border-row">
+                                        {{data.nombre}}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Nombre Residente -->
+            
+            
+                            <!-- Carrera No Control -->
+                            <div class="col-12">
+                                <div class="row g-0">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Carrera:</b>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row g-0">
+                                            <div class="col border-row">
+                                                {{data.carrera}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-1 border-row">
+                                                <b>No. de Control:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>{{data.noControl}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Carrera No Control -->
+            
+            
+                            <!-- Domicilio -->
+                            <div class="col-12">
+                                <div class="row g-0 relative">
+                                    <div class="col-auto border-row ps-1">
+                                        <b>Domicilio:</b>
+                                    </div>
+                                    <div class="col border-row">
+                                        {{data.domicilio}}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Domicilio -->
+            
+            
+            
+                            <!-- Titular -->
+                            <div class="col-12 relative">
+                                <div class="row g-0 relative">
+                                    <div class="col-2 border-row ps-1">
+                                        <b>E-mail:</b>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <div class="col relative">
+                                        <div class="row g-0 alto2 absolute">
+                                            <div class="col border-row">
+                                                {{data.email}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>Para Seguridad social acudir:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-3 border-row">
+                                                <div class="row g-0">
+                                                    <div class="col-12 alto3">
+                                                        {{data.seguroSocial}}
+                                                    </div>
+            
+                                                    <div class="col-12 alto3">
+                                                        <b>No. : {{data.noSeguro}}</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Titular -->
+            
+            
+                            <!-- Asesor Ext -->
+                            <div class="col-12 relative mb-4">
+                                <div class="row g-0 relative">
+                                    <div class="col-2 border-row ps-1">
+                                        <b>Ciudad:</b>
+                                    </div>
+                                    <div class="col relative">
+                                        <div class="row g-0 alto2 absolute">
+                                            <div class="col border-row">
+                                                {{data.ciudadEstado}}
+                                            </div>
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>Teléfono:</b>
+                                            </div>
+                                            <!-- END RFC -->
+            
+                                            <!-- RFC -->
+                                            <div class="col-2 border-row">
+                                                <b>{{data.telefono}}</b>
+                                            </div>
+                                            <!-- END RFC -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Asesor Ext -->
+            
+            
+                            <!-- Firma -->
+                            <div class="col-12 mt-5">
+                                <p class="text-center mb-1">__________________________________</p>
+                                <p class="text-center my-1">Firma del estudiante</p>
+                            </div>
+                            <!-- END Firma -->
+            
+            
+                        </div>
+                    </div>
+                    <!-- END Datos del alumno -->
+            
+                </div>
+            </div>
+        </div>
+        <!-- END Header -->
+    </div>
+
+
+</div>
+
+
